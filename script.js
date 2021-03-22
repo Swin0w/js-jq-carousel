@@ -1,16 +1,20 @@
 function slideNext() {
-  var frame = $(".now");
+  var frame = $(".active");
   var afterFrame = frame.next("img");
 
-  frame.removeClass("now");
-  afterFrame.addClass("now");
+  frame.removeClass("active");
+  afterFrame.addClass("active");
 }
 function slidePrev() {
-  var frame = $(".now");
+  var frame = $(".active");
   var prevFrame = frame.prev("img");
 
-  frame.removeClass("now");
-  prevFrame.addClass("now");
+  frame.removeClass("active");
+  prevFrame.addClass("active");
+
+  if (frame.hasClass(active end)) {
+    ;
+  }
 }
 // function slider() {
 //   var frame = $(".now");
@@ -20,6 +24,8 @@ function slidePrev() {
 //   afterFrame.addClass("now");
 // }
 function init() {
-  $(".prev").click("slidePrev");
-  $(".next").click("slideNext");
+  $(".prev").click(slidePrev);
+  $(".next").click(slideNext);
 }
+
+init();
