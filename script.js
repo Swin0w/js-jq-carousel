@@ -4,6 +4,10 @@ function slideNext() {
 
   frame.removeClass("active");
   afterFrame.addClass("active");
+
+  if (frame.hasClass("last")) {
+    frame.next("first");
+  }
 }
 function slidePrev() {
   var frame = $(".active");
@@ -12,8 +16,8 @@ function slidePrev() {
   frame.removeClass("active");
   prevFrame.addClass("active");
 
-  if (frame.hasClass(active end)) {
-    ;
+  if (frame.hasClass("first")) {
+    frame.prev("last");
   }
 }
 // function slider() {
