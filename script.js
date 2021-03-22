@@ -2,23 +2,24 @@ function slideNext() {
   var frame = $(".active");
   var afterFrame = frame.next("img");
 
-  frame.removeClass("active");
-  afterFrame.addClass("active");
-
   if (frame.hasClass("last")) {
-    frame.next("first");
+    $(".first").addClass("active");
+  } else {
+    afterFrame.addClass("active");
   }
+  frame.removeClass("active");
 }
 function slidePrev() {
   var frame = $(".active");
   var prevFrame = frame.prev("img");
 
-  frame.removeClass("active");
-  prevFrame.addClass("active");
-
   if (frame.hasClass("first")) {
-    frame.prev("last");
+    frame.removeClass("active");
+    $(".last").addClass("active");
+  } else {
+    prevFrame.addClass("active");
   }
+  frame.removeClass("active");
 }
 // function slider() {
 //   var frame = $(".now");
